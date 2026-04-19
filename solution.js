@@ -60,3 +60,41 @@ const sumOfElements = (arr) => {
 
 // console.log(sumOfElements([3, 4, 4, 4]))
 
+
+// 6. Count Vowels
+
+const countVowels = (str) => {
+    let count = 0;
+    str.split("").forEach(char => {
+        if (['a', 'e', 'i', 'o', 'u'].includes(char.toLowerCase())) {
+            count++
+        }
+    });
+    return count;
+}
+
+// console.log(countVowels("next level web development"))
+
+// 7. Factorial Calculation
+
+const calculateFactorial = (n) => {
+    let result = 1;
+    for (let i = n; i > 0; i--) {
+        result = result * i
+    }
+    return result
+}
+
+// console.log(calculateFactorial(5))
+
+
+// 8. Even or Odd List
+
+const evenNumbers = (nums) => {
+    return nums.filter(num => {
+        return num % 2 === 0
+    })
+}
+
+// console.log(evenNumbers([1, 2, 3, 4, 5, 6]))
+
