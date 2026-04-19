@@ -1,4 +1,4 @@
-* **The Problems**
+**The Problems**
 
   * **1. Reverse a String**
 

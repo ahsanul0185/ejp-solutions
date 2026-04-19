@@ -1,5 +1,5 @@
 
-// 1. Reverse a String
+// 1. Reverse a string
 const reverseString = (str) => {
     return str.split("").reverse().join("")
 }
@@ -27,7 +27,7 @@ const fizzBuzz = (n) => {
 // fizzBuzz(45)
 
 
-// 3. Find the Largest Number in an Array
+// 3. Find the largest number
 const largestNumber = (arr) => {
     let largeNum = arr[0];
 
@@ -43,7 +43,7 @@ const largestNumber = (arr) => {
 // console.log(largestNumber([3, 4, 67, 1, 43, 543, 23, 453, 343, 53]))
 
 
-// 4. Check for Palindrome
+// 4. Check palindrome
 const checkPalindrome = (str) => {
     return str.toLowerCase() === str.toLowerCase().split("").reverse().join("")
 }
@@ -51,7 +51,7 @@ const checkPalindrome = (str) => {
 // console.log(checkPalindrome("mim"))
 
 
-// 5. Sum of Array Elements
+// 5. Sum of array elements
 const sumOfElements = (arr) => {
     return arr.reduce((acc, cur) => {
         return acc + cur
@@ -61,7 +61,7 @@ const sumOfElements = (arr) => {
 // console.log(sumOfElements([3, 4, 4, 4]))
 
 
-// 6. Count Vowels
+// 6. Count vowels
 
 const countVowels = (str) => {
     let count = 0;
@@ -75,7 +75,7 @@ const countVowels = (str) => {
 
 // console.log(countVowels("next level web development"))
 
-// 7. Factorial Calculation
+// 7. Factorial calculation
 
 const calculateFactorial = (n) => {
     let result = 1;
@@ -88,7 +88,7 @@ const calculateFactorial = (n) => {
 // console.log(calculateFactorial(5))
 
 
-// 8. Even or Odd List
+// 8. Even or odd list
 
 const evenNumbers = (nums) => {
     return nums.filter(num => {
@@ -98,3 +98,92 @@ const evenNumbers = (nums) => {
 
 // console.log(evenNumbers([1, 2, 3, 4, 5, 6]))
 
+
+// 9. Fibonacci Sequence
+
+const fibonacciSequence = (n) => {
+    const result = [0, 1]
+    for (let i = 2; i < n; i++) {
+        result.push(result[i - 1] + result[i - 2])
+    }
+    return result.slice(0, n)
+}
+
+// console.log(fibonacciSequence(8))
+
+
+// 10. Find minimum in an array
+
+const minimumNumber = (arr) => {
+    let minNum = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < minNum) {
+            minNum = arr[i]
+        }
+    }
+    return minNum
+}
+
+// console.log(minimumNumber([3, 4, 67, 1, 43, 543, 23, 453, 343, 53]))
+
+
+// 11. Multiplication table
+const multiplicationTable = (n) => {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${n} x ${i} = ${n * i}`)
+    }
+}
+
+// multiplicationTable(55)
+
+
+// 12. Check the prime number
+const checkPrime = (n) => {
+    if (n <= 1) return false
+
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+// console.log(checkPrime(6))
+
+
+// 13. Remove duplicates 
+const removeDuplicates = (nums) => {
+    const result = []
+    nums.forEach(num => {
+        if (!result.includes(num)) {
+            result.push(num)
+        }
+    })
+    return result
+}
+
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+
+
+// 14. Convert C to F
+
+const celsiusToFahrenheit = (celsius) => {
+    return (celsius * 9 / 5) + 32
+}
+
+// console.log(celsiusToFahrenheit(33))
+
+
+// 15. Count occurrences 
+const countOccurrences = (str, char) => {
+    let count = 0
+    str.split("").forEach(c => {
+        if (c === char) {
+            count++
+        }
+    })
+    return count
+}
+
+// console.log(countOccurrences("hello world", "l"))
